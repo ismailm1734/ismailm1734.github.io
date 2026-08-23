@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>İsmail Memiş - Portfolio</title>
+  <meta name="description" content="Computer science student at Sabancı University, graduating 2027. I can't play a game without taking apart how it works.">
+
+  <meta property="og:title" content="İsmail Memiş - Portfolio">
+  <meta property="og:description" content="Computer science student at Sabancı University, graduating 2027. I can't play a game without taking apart how it works.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>İsmail Memiş</h1>
+      <p>Computer science student at Sabancı University, graduating 2027.<br>
+      I can't play a game without taking apart how it works.</p>
+
+      <div class="header-links">
+        <a href="https://github.com/ismailm1734" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+          <span class="icon icon-github"></span>
+        </a>
+        <a href="https://www.linkedin.com/in/ismail-memiş-722ab3253/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+          <span class="icon icon-linkedin"></span>
+        </a>
+        <a href="mailto:ismailmemis1734@gmail.com" aria-label="Email">
+          <span class="icon icon-mail"></span>
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <section class="featured-project">
+        <div class="section-number">01</div>
+        <h2>Match Villains Economy Lab</h2>
+        <img src="assets/economy-lab.png" alt="Screenshot of the Match Villains Economy Lab simulator">
+
+        <div class="featured-content">
+          <div class="content-block">
+            <h3>Problem</h3>
+            <p>How does a match-3 game balance its difficulty curve against in-app purchase revenue? How hard can you push a player before they quit instead of paying?</p>
+          </div>
+
+          <div class="content-block">
+            <h3>What I did</h3>
+            <p>I played Match Villains to level 211, recording where difficulty spikes landed and what triggered purchase prompts, then built an interactive simulator in vanilla JavaScript around the levers a real economy designer actually turns: win rates on normal and wall levels, how often walls appear, the share of losses that end just short of the goal, the buy-rate at each of those moments, pack prices, and the lives gate. The model runs a cohort of <span class="accent-number">1,000</span> players through <span class="accent-number">120</span> levels and reports revenue per player, purchases, end retention, the difficulty curve, and where players drop off.</p>
+          </div>
+
+          <div class="content-block">
+            <h3>What I found</h3>
+            <p>Difficulty walls arrive roughly every <span class="accent-number">15</span> levels. The game runs no ads at all — revenue is entirely IAP. The extra-moves offer is triggered on near-win losses, when the player runs out of moves just short of the goal. Sweeping wall difficulty through the model shows the core trade-off: harder walls raise revenue per player until churn overtakes the gain, so the balance point is a sweet spot rather than a straight line.</p>
+          </div>
+
+          <div class="links-row">
+            Links:
+            <a href="https://ismailm1734.github.io/matchvillains-economy-lab/" target="_blank" rel="noopener noreferrer">Live demo</a>
+            <span class="separator">·</span>
+            <a href="https://github.com/ismailm1734/matchvillains-economy-lab" target="_blank" rel="noopener noreferrer">Code</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="other-projects">
+        <div class="section-number">02</div>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <img src="assets/meeting-assistant.png" alt="Screenshot of the Teams Meeting Assistant">
+            <div class="card-content">
+              <h3>Teams Meeting Assistant</h3>
+              <p>An assistant that pulls Microsoft Teams meeting transcripts, emails a summary to participants automatically, and answers follow-up questions about past meetings over WhatsApp. The hard parts were idempotency — making sure a transcript is never processed or sent twice — and carrying meeting access permissions through correctly. In active use at a <span class="accent-number">210</span>-person logistics company.</p>
+              <div class="tech-tags">n8n · Supabase · WhatsApp Cloud API · Claude API</div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/tennis.png" alt="Screenshot of the Tennis Match Outcome Prediction project">
+            <div class="card-content">
+              <h3>Tennis Match Outcome Prediction</h3>
+              <p>Predicting ATP match winners from historical match data. Engineered ranking and contextual features including surface, tournament level and seeding, then trained and compared logistic regression against a random forest.</p>
+              <div class="tech-tags">Python · scikit-learn · pandas</div>
+              <div class="links-row">
+                Links: <a href="https://github.com/ismailm1734/DSA-210-Project" target="_blank" rel="noopener noreferrer">https://github.com/ismailm1734/DSA-210-Project</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/smart-parking.png" alt="Screenshot of the Smart Parking Reservation System">
+            <div class="card-content">
+              <h3>Smart Parking Reservation System</h3>
+              <p>A parking reservation system with a PHP backend and a hybrid data layer combining MySQL and MongoDB. Stored procedures and triggers handle reporting and data integrity. Solo course project for database systems.</p>
+              <div class="tech-tags">PHP · MySQL · MongoDB</div>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img src="assets/lc3.png" alt="Screenshot of the LC-3 Virtual Machine">
+            <div class="card-content">
+              <h3>LC-3 Virtual Machine</h3>
+              <p>A virtual machine that interprets the LC-3 instruction set and manages memory with paging, written for an operating systems course.</p>
+              <div class="tech-tags">C++</div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <section class="about">
+        <div class="section-number">03</div>
+        <div class="about-content">
+          <p>I'm a computer science student at Sabancı University, graduating in <span class="accent-number">2027</span>. Most of what I build starts with taking something apart — a game's economy, a company's meeting workflow — and turning the behaviour underneath it into models and metrics.</p>
+          <p>Right now I'm doing an AI and data integration internship at a logistics company, working on the customs side of its platform. Outside of that I play a lot of puzzle and competitive games, mostly Teamfight Tactics at Diamond, so I come at games from the player's side and not just the spreadsheet's.</p>
+          <div class="tech-tags">Python · C++ · SQL · JavaScript · PHP · pandas · scikit-learn · Git · Linux</div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Email: <a href="mailto:ismailmemis1734@gmail.com">ismailmemis1734@gmail.com</a></p>
+      <p>CV: <a href="assets/ismail-memis-cv.pdf" target="_blank" rel="noopener noreferrer">assets/ismail-memis-cv.pdf</a></p>
+    </footer>
+  </div>
+</body>
+</html>
