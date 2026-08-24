@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" font-family="Inter, Arial, sans-serif">
+  <rect width="1200" height="675" fill="#0e0e10"/>
+
+  <text x="60" y="70" font-family="'JetBrains Mono', monospace" font-size="16" letter-spacing="2" fill="#7f77dd">ATP MATCH OUTCOME PREDICTION</text>
+  <text x="60" y="106" font-size="30" font-weight="700" fill="#ededed">Logistic Regression vs. Random Forest</text>
+  <text x="60" y="136" font-size="16" fill="#9a9a9f">Predicting match winners from ATP tour data · DSA 210 project</text>
+
+  <!-- chart area -->
+  <g font-family="'JetBrains Mono', monospace" font-size="13" fill="#9a9a9f">
+    <line x1="150" y1="260" x2="650" y2="260" stroke="#232328" stroke-width="1"/>
+    <line x1="150" y1="335" x2="650" y2="335" stroke="#232328" stroke-width="1"/>
+    <line x1="150" y1="410" x2="650" y2="410" stroke="#3a3a42" stroke-width="1" stroke-dasharray="4 4"/>
+    <line x1="150" y1="485" x2="650" y2="485" stroke="#232328" stroke-width="1"/>
+    <line x1="150" y1="560" x2="650" y2="560" stroke="#3a3a42" stroke-width="1.5"/>
+
+    <text x="140" y="264" text-anchor="end">100%</text>
+    <text x="140" y="339" text-anchor="end">75%</text>
+    <text x="140" y="414" text-anchor="end">50%</text>
+    <text x="140" y="489" text-anchor="end">25%</text>
+    <text x="140" y="564" text-anchor="end">0%</text>
+    <text x="645" y="403" text-anchor="end" font-size="11" fill="#6b6b72">50% baseline</text>
+  </g>
+
+  <!-- bars -->
+  <rect x="230" y="381" width="140" height="179" rx="4" fill="#7f77dd"/>
+  <text x="300" y="365" text-anchor="middle" font-size="22" font-weight="700" fill="#ededed">59.8%</text>
+  <text x="300" y="588" text-anchor="middle" font-size="15" fill="#ededed">Logistic Regression</text>
+  <text x="300" y="608" text-anchor="middle" font-size="12" fill="#9a9a9f">precision 0.60 · recall 0.60</text>
+
+  <rect x="430" y="388" width="140" height="172" rx="4" fill="#7ee2ab"/>
+  <text x="500" y="372" text-anchor="middle" font-size="22" font-weight="700" fill="#ededed">57.4%</text>
+  <text x="500" y="588" text-anchor="middle" font-size="15" fill="#ededed">Random Forest</text>
+  <text x="500" y="608" text-anchor="middle" font-size="12" fill="#9a9a9f">precision 0.57 · recall 0.57</text>
+
+  <!-- info cards -->
+  <g font-family="'JetBrains Mono', monospace">
+    <rect x="720" y="150" width="420" height="105" rx="6" fill="#1e1e23"/>
+    <text x="744" y="180" font-size="12" letter-spacing="1.5" fill="#9a9a9f">DATASET</text>
+    <text x="744" y="212" font-size="21" font-weight="700" fill="#ededed">188,161 ATP matches</text>
+    <text x="744" y="236" font-size="13" fill="#9a9a9f">1968&#8211;2022 &#183; 298,031 player-rows after prep</text>
+
+    <rect x="720" y="270" width="420" height="105" rx="6" fill="#1e1e23"/>
+    <text x="744" y="300" font-size="12" letter-spacing="1.5" fill="#9a9a9f">TRAIN / TEST SPLIT</text>
+    <text x="744" y="332" font-size="21" font-weight="700" fill="#ededed">238,424 / 59,607</text>
+    <text x="744" y="356" font-size="13" fill="#9a9a9f">80 / 20 split, stratified by outcome</text>
+
+    <rect x="720" y="390" width="420" height="105" rx="6" fill="#1e1e23"/>
+    <text x="744" y="420" font-size="12" letter-spacing="1.5" fill="#9a9a9f">FEATURES</text>
+    <text x="744" y="452" font-size="18" font-weight="700" fill="#ededed">rank, seed, draw size</text>
+    <text x="744" y="476" font-size="13" fill="#9a9a9f">+ one-hot surface &amp; tourney level, scaled</text>
+
+    <rect x="720" y="510" width="420" height="105" rx="6" fill="#1e1e23"/>
+    <text x="744" y="540" font-size="12" letter-spacing="1.5" fill="#9a9a9f">MODELS</text>
+    <text x="744" y="572" font-size="18" font-weight="700" fill="#ededed">scikit-learn</text>
+    <text x="744" y="596" font-size="13" fill="#9a9a9f">LogisticRegression &amp; RandomForestClassifier</text>
+  </g>
+</svg>
