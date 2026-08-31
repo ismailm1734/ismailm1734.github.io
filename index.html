@@ -12,12 +12,12 @@
   <meta property="og:description" content="Computer science student at Sabancı University, graduating 2027. I like taking systems apart to see what actually makes them work.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ismailm1734.github.io/">
-  <meta property="og:image" content="https://ismailm1734.github.io/assets/economy-lab.png">
+  <meta property="og:image" content="https://ismailm1734.github.io/assets/meeting-assistant.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="İsmail Memiş - Portfolio">
   <meta name="twitter:description" content="Computer science student at Sabancı University, graduating 2027. I like taking systems apart to see what actually makes them work.">
-  <meta name="twitter:image" content="https://ismailm1734.github.io/assets/economy-lab.png">
+  <meta name="twitter:image" content="https://ismailm1734.github.io/assets/meeting-assistant.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,30 +48,23 @@
     <main>
       <section class="featured-project">
         <div class="section-number">01</div>
-        <h2>Match Villains Economy Lab</h2>
-        <img src="assets/economy-lab.png" alt="Screenshot of the Match Villains Economy Lab simulator">
+        <h2>Teams Meeting Assistant</h2>
+        <img src="assets/meeting-assistant.png" alt="Screenshot of the Teams Meeting Assistant">
 
         <div class="featured-content">
           <div class="content-block">
             <h3>Problem</h3>
-            <p>How does a match-3 game balance its difficulty curve against in-app purchase revenue? How hard can you push a player before they quit instead of paying?</p>
+            <p>Meeting follow-ups were manual: someone had to remember to write up a summary for participants, and answering "what did we decide on X" meant digging back through a transcript by hand.</p>
           </div>
 
           <div class="content-block">
             <h3>What I did</h3>
-            <p>I played Match Villains to level 211, recording where difficulty spikes landed and what triggered purchase prompts, then built an interactive simulator in vanilla JavaScript around the levers a real economy designer actually turns: win rates on normal and wall levels, how often walls appear, the share of losses that end just short of the goal, the buy-rate at each of those moments, pack prices, and the lives gate. The model runs a cohort of <span class="accent-number">1,000</span> players through <span class="accent-number">120</span> levels and reports revenue per player, purchases, end retention, the difficulty curve, and where players drop off.</p>
+            <p>I built an automated pipeline in n8n that pulls Microsoft Teams meeting transcripts, emails a summary to participants automatically, and answers follow-up questions about past meetings over WhatsApp. Supabase stores transcripts and summaries, and the Claude API handles summarization and the WhatsApp Q&A.</p>
           </div>
 
           <div class="content-block">
             <h3>What I found</h3>
-            <p>Difficulty walls arrive roughly every <span class="accent-number">15</span> levels. The game runs no ads at all — revenue is entirely IAP. The extra-moves offer is triggered on near-win losses, when the player runs out of moves just short of the goal. Sweeping wall difficulty through the model shows the core trade-off: harder walls raise revenue per player until churn overtakes the gain, so the balance point is a sweet spot rather than a straight line.</p>
-          </div>
-
-          <div class="links-row">
-            Links:
-            <a href="https://ismailm1734.github.io/matchvillains-economy-lab/" target="_blank" rel="noopener noreferrer">Live demo</a>
-            <span class="separator">·</span>
-            <a href="https://github.com/ismailm1734/matchvillains-economy-lab" target="_blank" rel="noopener noreferrer">Code</a>
+            <p>The hard parts were idempotency — making sure a transcript is never processed or sent twice — and carrying meeting access permissions through the pipeline correctly. It's now in active use at a <span class="accent-number">210</span>-person logistics company.</p>
           </div>
         </div>
       </section>
@@ -79,6 +72,20 @@
       <section class="other-projects">
         <div class="section-number">02</div>
         <div class="projects-grid">
+
+          <article class="project-card">
+            <img src="assets/economy-lab.png" alt="Screenshot of the Match Villains Economy Lab simulator">
+            <div class="card-content">
+              <h3>Match Villains Economy Lab</h3>
+              <p>An interactive simulator built around how a match-3 game balances its difficulty curve against in-app purchase revenue. Modeled win rates, wall frequency, near-win purchase prompts, pack prices, and the lives gate, then ran a cohort of <span class="accent-number">1,000</span> players through <span class="accent-number">120</span> levels to find the balance point between harder difficulty and player churn.</p>
+              <div class="tech-tags">JavaScript</div>
+              <div class="links-row">
+                Links: <a href="https://ismailm1734.github.io/matchvillains-economy-lab/" target="_blank" rel="noopener noreferrer">Live demo</a>
+                <span class="separator">·</span>
+                <a href="https://github.com/ismailm1734/matchvillains-economy-lab" target="_blank" rel="noopener noreferrer">Code</a>
+              </div>
+            </div>
+          </article>
 
           <article class="project-card">
             <img src="assets/boids.png" alt="Screenshot of Shoal, a boids-based fish flocking game">
@@ -103,15 +110,6 @@
                 <span class="separator">·</span>
                 <a href="https://github.com/ismailm1734/ruthless-pomodoro" target="_blank" rel="noopener noreferrer">Code</a>
               </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/meeting-assistant.png" alt="Screenshot of the Teams Meeting Assistant">
-            <div class="card-content">
-              <h3>Teams Meeting Assistant</h3>
-              <p>An assistant that pulls Microsoft Teams meeting transcripts, emails a summary to participants automatically, and answers follow-up questions about past meetings over WhatsApp. The hard parts were idempotency — making sure a transcript is never processed or sent twice — and carrying meeting access permissions through correctly. In active use at a <span class="accent-number">210</span>-person logistics company.</p>
-              <div class="tech-tags">n8n · Supabase · WhatsApp Cloud API · Claude API</div>
             </div>
           </article>
 
