@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Director Stage — Kamera ve Poz</title>
+    <script type="module" crossorigin src="/director-stage/assets/index-CcOYob1Y.js"></script>
+    <link rel="stylesheet" crossorigin href="/director-stage/assets/index-DsJXOiDS.css">
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark">◈</span><div><strong>DIRECTOR STAGE</strong><small>kamera, oyuncu ve poz planlama</small></div></div>
+        <div class="top-actions"><span class="offline">● YEREL · GPU YOK</span><label class="import-button">Sahne Aç<input id="import-json" type="file" accept=".json" hidden /></label><button id="export-json" class="secondary">Sahneyi Kaydet</button><button id="export-maps" class="secondary" title="Derinlik ve OpenPose poz haritası, 1920×1080">Kontrol Haritaları</button><button id="export-png" class="primary">Kareyi PNG Al</button></div>
+      </header>
+      <aside class="sidebar left">
+        <section><div class="section-head"><h2>Çekimler</h2><span>01 / 05</span></div><div id="shot-list" class="shot-list"></div><div class="row"><button id="save-shot" class="secondary full">Bu açıyı kaydet</button></div></section>
+        <section><div class="section-head"><h2>Karakterler</h2><span>3 rigli insan</span></div><div id="actor-list" class="actor-list"></div><p class="hint">Bir karakteri seç; sürükleme araçları sahnenin üzerinde açılır.</p></section>
+        <section><h2>Hazır insan modeli</h2><p class="hint">Şimdilik CC0 lisanslı rigli insan modeli kullanılıyor. Kendi GLB veya Mixamo FBX modelini seçili karaktere yükleyebilirsin.</p><label class="file-button">Model yükle (.glb / .fbx)<input id="model-file" type="file" accept=".glb,.fbx" hidden /></label><p id="model-status" class="status"></p></section>
+      </aside>
+      <main class="stage-wrap">
+        <div class="viewport-bar"><div><button id="mode-move" class="tool active">↔ Taşı</button><button id="mode-rotate" class="tool">⟳ Döndür</button><button id="mode-pose" class="tool">◉ Eklem</button></div><div class="view-modes"><button data-view="image" class="tool active">Görüntü</button><button data-view="depth" class="tool">Derinlik</button><button data-view="pose" class="tool">Poz</button></div><div class="camera-badge">KAMERA <span id="camera-name">01 · Geniş</span></div></div>
+        <div id="shot-note" class="shot-note" hidden></div>
+        <div id="viewport"></div>
+        <div class="viewport-footer"><span>Sol tık: seç / düzenle</span><span>Sürükle: kamerayı döndür</span><span>Fare tekeri: yaklaş / uzaklaş</span><span id="render-status">Hazırlanıyor…</span></div>
+      </main>
+      <aside class="sidebar right">
+        <section><div class="section-head"><h2>Karakter</h2><span id="selected-name">Oyuncu A</span></div><div class="field"><label>Konum X</label><input data-actor="x" type="range" min="-7" max="7" step="0.05"/><output data-actor-out="x"></output></div><div class="field"><label>Konum Z</label><input data-actor="z" type="range" min="-7" max="7" step="0.05"/><output data-actor-out="z"></output></div><div class="field"><label>Dönüş</label><input data-actor="yaw" type="range" min="-180" max="180" step="1"/><output data-actor-out="yaw"></output></div><div class="field"><label>Boyut</label><input data-actor="scale" type="range" min="0.65" max="1.3" step="0.01"/><output data-actor-out="scale"></output></div></section>
+        <section><div class="section-head"><h2>Poz</h2><span>statik kare</span></div><label class="stack">Hareketten poz seç<select id="clip-select"></select></label><div class="field"><label>Hareket anı</label><input id="clip-time" type="range" min="0" max="1" step="0.01" value="0.5"/><output id="clip-time-out">%50</output></div><label class="stack">Eklem seç<select id="bone-select"></select></label><p class="hint">“Eklem” aracını seçince kemik üzerinde döndürme halkaları görünür. Seçili eklemi aşağıdaki düğmeyle sıfırlayabilirsin.</p><button id="reset-bone" class="secondary full">Eklemi sıfırla</button></section>
+        <section><div class="section-head"><h2>Kamera</h2><span>serbest kontrol</span></div><div class="preset-grid"><button data-camera-preset="wide">Geniş</button><button data-camera-preset="close">Yakın</button><button data-camera-preset="low">Alçak</button><button data-camera-preset="overhead">Üst</button></div><div class="field"><label>Yükseklik</label><input data-camera="height" type="range" min="0.5" max="8" step="0.05"/><output data-camera-out="height"></output></div><div class="field"><label>Görüş açısı</label><input data-camera="fov" type="range" min="20" max="80" step="1"/><output data-camera-out="fov"></output></div><button id="frame-all" class="secondary full">Üç karakteri kadraja al</button></section>
+      </aside>
+    </div>
+  </body>
+</html>
