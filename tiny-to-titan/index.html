@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+    <title>Tiny to Titan</title>
+    <script type="module" crossorigin src="./game.js"></script>
+    <link rel="stylesheet" crossorigin href="./index.css">
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+
+    <div id="hud">
+      <div id="hurt"></div>
+
+      <div id="topbar">
+        <div id="me">
+          <div id="portrait"><img id="portraitImg" alt="" /><span id="levelText">1</span></div>
+          <div id="bars">
+            <div id="stageName">Worm</div>
+            <div id="xpBar" class="bar"><div id="xpFill"></div><span id="xpText"></span></div>
+            <div id="hpBar" class="bar"><div id="hpFill"></div><span id="hpText"></span></div>
+          </div>
+          <div id="next">
+            <div id="nextIcon"><img id="nextImg" alt="" /></div>
+            <div id="nextLabel">Next</div>
+          </div>
+        </div>
+        <button id="pauseBtn" aria-label="Pause"><span></span><span></span></button>
+      </div>
+
+      <div id="biomes" aria-hidden="true">
+        <div class="biome" data-zone="meadow">Meadow</div>
+        <div class="biome" data-zone="lake">Lakeshore</div>
+        <div class="biome" data-zone="forest">Forest</div>
+        <div class="biome" data-zone="savanna">Savanna</div>
+        <div id="biomeDot"></div>
+      </div>
+
+      <div id="goal"><span id="goalArrow">➤</span><span id="goalText"></span></div>
+      <div id="toast"></div>
+      <div id="floaters"></div>
+      <div id="hint"></div>
+
+      <div id="stick"><div id="stickKnob"></div></div>
+      <button id="attack" aria-label="Attack">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M10 40 L18 8 L22 30 Z M22 40 L27 6 L31 30 Z M33 40 L37 10 L41 31 Z" />
+        </svg>
+        <span>Attack</span>
+        <div id="attackCd"></div>
+      </button>
+
+      <div id="menu">
+        <div id="menuCard">
+          <div id="menuKicker"></div>
+          <h1 id="menuTitle">Tiny to Titan</h1>
+          <p id="menuText"></p>
+          <div id="menuChain"></div>
+          <ul id="menuHelp"></ul>
+          <div id="menuButtons"></div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
