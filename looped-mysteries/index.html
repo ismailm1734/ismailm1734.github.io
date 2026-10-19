@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Looped Mysteries · Answers</title>
-<meta name="description" content="Answers to the Looped Mysteries picture puzzles from Instagram." />
+<title>Looped Mysteries</title>
+<meta name="description" content="Play the Looped Mysteries picture puzzles free on your phone, and check the answers to every case from Instagram." />
 <meta name="theme-color" content="#0b0e24" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,17 +21,22 @@ header .kicker { font-size: 13px; letter-spacing: 0.5em; padding-left: 0.5em; co
 header h1 { margin: 4px 0 6px; font-size: 34px; font-weight: 900; line-height: 1.05;
   background: linear-gradient(180deg, #fff1b8 8%, var(--gold) 50%, #b0802a 92%); -webkit-background-clip: text; background-clip: text; color: transparent; }
 header p { margin: 0; color: var(--muted); font-style: italic; }
-.cta { display: block; margin: 0 0 30px; padding: 18px 20px; border-radius: 12px; text-decoration: none; color: var(--text);
-  background: linear-gradient(180deg, #1c2c78, #101a4e); box-shadow: 0 0 0 1px var(--gold-deep), 0 0 0 4px var(--gold-mid), 0 0 0 5px var(--gold-deep); }
-.cta b { display: block; font-family: 'Cinzel', Georgia, serif; font-size: 19px; color: var(--gold); margin-bottom: 4px; }
-.cta span { color: #e9dfc2; font-size: 16.5px; }
-.cta .go { display: inline-block; margin-top: 12px; padding: 9px 18px; border-radius: 8px; background: linear-gradient(180deg, #f7dc8a, var(--gold) 40%, var(--gold-mid));
-  color: #2a1a03; font-family: 'Cinzel', Georgia, serif; font-weight: 700; font-size: 14px; letter-spacing: 0.06em; }
+section h2.title { margin: 30px 0 4px; text-align: center; font-family: 'Cinzel', Georgia, serif; font-size: 21px; color: var(--gold); }
+section .lead { margin: 0 0 6px; text-align: center; color: var(--muted); font-style: italic; font-size: 16px; }
+.packs { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+.pack { display: flex; flex-direction: column; padding: 10px 10px 12px; border-radius: 10px; text-decoration: none; color: var(--text);
+  background: linear-gradient(180deg, #1c2c78, #101a4e); box-shadow: 0 0 0 1px var(--gold-deep), 0 0 0 3px var(--gold-mid), 0 0 0 4px var(--gold-deep); }
+.pack img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 6px; margin-bottom: 8px; }
+.pack b { font-family: 'Cinzel', Georgia, serif; font-size: 15px; line-height: 1.2; color: var(--gold); }
+.pack span { flex: 1; margin: 4px 0 10px; font-size: 15px; line-height: 1.25; color: #e9dfc2; }
+.pack .go { flex: none; margin: 0; padding: 7px 0; border-radius: 7px; text-align: center; background: linear-gradient(180deg, #f7dc8a, var(--gold) 40%, var(--gold-mid));
+  color: #2a1a03; font-family: 'Cinzel', Georgia, serif; font-weight: 700; font-size: 14px; }
+.solve { display: inline-block; margin-left: 12px; color: var(--gold); font-size: 16px; }
 .play { display: block; margin: 0 0 22px; padding: 14px 18px; border-radius: 12px; text-align: center; text-decoration: none;
   background: linear-gradient(180deg, #f7dc8a, var(--gold) 40%, var(--gold-mid)); color: #2a1a03;
   font-family: 'Cinzel', Georgia, serif; font-weight: 700; font-size: 17px; letter-spacing: 0.04em; box-shadow: 0 6px 18px rgba(0,0,0,0.45); }
 .play span { display: block; margin-top: 2px; font-family: 'Crimson Pro', Georgia, serif; font-weight: 500; font-style: italic; font-size: 15.5px; letter-spacing: 0; color: #4a3008; }
-.cta-free { display: block; margin: -18px 0 30px; text-align: center; color: var(--gold); font-size: 16.5px; }
+.cta-free { display: block; margin: 14px 0 0; text-align: center; color: var(--gold); font-size: 16.5px; }
 .more { display: inline-block; margin-top: 8px; color: var(--gold); font-size: 16px; }
 .case { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 14px; padding: 16px 0; border-bottom: 1px solid rgba(201,154,53,0.35); }
 .case img { width: 88px; aspect-ratio: 9 / 16; object-fit: cover; border-radius: 4px; box-shadow: 0 0 0 2px var(--gold-mid); }
@@ -49,32 +54,51 @@ footer a { color: var(--gold); }
 <body>
 <main>
   <header>
-    <div class="kicker display">LOOPED MYSTERIES</div>
-    <h1 class="display">THE ANSWERS</h1>
-    <p>Tap a case to reveal who did it. New answers unlock a few days after each post.</p>
+    <div class="kicker display">PICTURE MYSTERIES</div>
+    <h1 class="display">LOOPED MYSTERIES</h1>
+    <p>One picture. Five suspects. Can you find who it is?</p>
   </header>
-  <a class="play" href="play/">Play the cases →<span>Find the clues yourself and name the culprit. Free, on your phone.</span></a>
-  <div id="cta"></div>
-  <div id="list"></div>
+  <a class="play" href="play/">Play the cases free →<span>Find the clues yourself and name the culprit, on your phone.</span></a>
+  <section>
+    <h2 class="title">The answers</h2>
+    <p class="lead">Each answer unlocks 3 days after the post.</p>
+    <div id="list"></div>
+  </section>
+  <section id="shop">
+    <h2 class="title">Printable packs</h2>
+    <p class="lead">Print them and play with friends, family or a class.</p>
+    <div class="packs" id="packs"></div>
+  </section>
   <footer>New mystery almost every day on <a href="https://www.instagram.com/loopedmysteries/">@loopedmysteries</a></footer>
 </main>
 <script>
-const SHOP = {"url": "https://loopedmysteries.gumroad.com/l/halloween-mystery-night", "title": "Hosting a Halloween party?", "text": "Halloween Mystery Night: 6 spooky cases plus invitations, ballot cards and a scoreboard. Print it tonight, play it with friends.", "button": "GET THE PARTY PACK · $2.99", "after_answer": "Solved it? Play 6 spooky cases at your Halloween party"};
+const PACKS = [{"url": "https://loopedmysteries.gumroad.com/l/case-files-vol-1", "image": "img/pack-vol1.jpg", "title": "Case Files Vol. 1", "text": "11 picture mysteries to print and solve with friends or a class.", "price": "$3.99"}, {"url": "https://loopedmysteries.gumroad.com/l/halloween-mystery-night", "image": "img/pack-halloween.jpg", "title": "Halloween Mystery Night", "text": "6 spooky cases plus invitations, ballot cards and a scoreboard for your party.", "price": "$2.99", "until": "2026-11-01"}];
 const FREE_URL = "";
 const UNLOCK_DAYS = 3;
-const CASES = [{"id": "alien2", "title": "Who Is the Alien? (The Farmhouse)", "posted": "2026-10-19", "culprit": "E", "who": "The Preacher", "answer": "Look at the church picnic flyer on the fridge: the town's pastor is an old bald man. This young 'preacher' looks like the sketch on the news, his car is parked at the crop circle, and he is holding his Bible upside down."}, {"id": "alien", "title": "Who Is the Alien?", "posted": "2026-10-17", "culprit": "E", "who": "The Glaciologist", "answer": "Look at the team photo: the real Glaciologist wears the same striped scarf, but he has a beard and glasses. Something walked in from that saucer tonight and took his place, almost perfectly."}, {"id": "ghost", "title": "Who Is the Ghost?", "posted": "2026-10-15", "culprit": "D", "who": "The Heiress", "answer": "Look at the mantelpiece: a photograph tied with a black mourning ribbon, and the girl in it is the Heiress. Cats always know. That is why it hisses at her."}, {"id": "train", "title": "Who Is the Vampire? (The Night Train)", "posted": "2026-10-13", "culprit": "E", "who": "The Student in the scarf", "answer": "Read the newspaper: BURIED YESTERDAY, above a photo of the Student. The stain on his scarf is where he was bitten. He died, and he rose again."}, {"id": "vampire", "title": "Who Is the Vampire?", "posted": "2026-10-08", "culprit": "E", "who": "The Countess", "answer": "The portrait on the wall is three hundred years old, and it shows the Countess exactly as she stands tonight, down to the ruby brooch. She has not aged a day."}, {"id": "host", "title": "Who Poisoned the Host?", "posted": "2026-10-02", "culprit": "C", "who": "The Doctor with the medicine case", "answer": "Poison comes in a vial, and the small cap lying beside the host's glass belongs to one. The Doctor is holding a tiny vial right now, and his medicine case is open."}, {"id": "ring", "title": "Who Stole the Ring?", "posted": "2026-10-01", "culprit": "A", "who": "The Groom", "answer": "Everyone else is staring at the empty box. The Groom is looking away, and his left hand stays buried in his pocket. Cold feet, and a ring he was not ready to give."}, {"id": "trophy", "title": "Who Stole the Trophy?", "posted": "2026-09-28", "culprit": "D", "who": "The Technician with the tool belt", "answer": "The ribbon around the stand was torn, and a scrap of the same red ribbon hangs from the Technician's tool belt. The heavy boot print beside it matches his work boots."}, {"id": "necklace", "title": "Who Stole the Necklace?", "posted": "2026-09-27", "culprit": "A", "who": "The Singer in gold sequins", "answer": "The gold star sequin lies inside the empty hollow, exactly where the necklace was. Only a hand reaching in could drop it there, and the Singer's sequinned cuff has a gap."}, {"id": "safe", "title": "Who Opened the Safe?", "posted": "2026-09-26", "culprit": "D", "who": "The Mechanic with oily hands", "answer": "The scratches around the keyhole mean the lock was forced with tools, not opened with a key. The dark smudge is grease, and the Mechanic's fingers are black with it."}, {"id": "painting", "title": "Who Stole the Painting?", "posted": "2026-09-24", "culprit": "B", "who": "The Auctioneer with the red card", "answer": "The painting was unscrewed from its frame, and right beside the screwdriver lies a torn red triangle. It is the missing corner of the Auctioneer's red card."}, {"id": "diamond", "title": "Who Stole the Diamond?", "posted": "2026-09-23", "culprit": "E", "who": "The Security Guard", "answer": "The case is closed and not a single pane is broken, so it was opened with a key and locked again. Only the Security Guard carries the keys."}, {"id": "crown", "title": "Who Stole the Crown?", "posted": "2026-09-22", "culprit": "E", "who": "The Guest with the gift box", "answer": "A crown is far too big for a pocket. The Guest with the gift box is the only one with somewhere to hide it, at a ball where nobody else brought a gift."}];
+const CASES = [{"id": "alien2", "title": "Who Is the Alien? (The Farmhouse)", "posted": "2026-10-19", "culprit": "E", "who": "The Preacher", "answer": "Look at the church picnic flyer on the fridge: the town's pastor is an old bald man. This young 'preacher' looks like the sketch on the news, his car is parked at the crop circle, and he is holding his Bible upside down.", "game": true}, {"id": "alien", "title": "Who Is the Alien?", "posted": "2026-10-17", "culprit": "E", "who": "The Glaciologist", "answer": "Look at the team photo: the real Glaciologist wears the same striped scarf, but he has a beard and glasses. Something walked in from that saucer tonight and took his place, almost perfectly.", "game": true}, {"id": "ghost", "title": "Who Is the Ghost?", "posted": "2026-10-15", "culprit": "D", "who": "The Heiress", "answer": "Look at the mantelpiece: a photograph tied with a black mourning ribbon, and the girl in it is the Heiress. Cats always know. That is why it hisses at her.", "game": true}, {"id": "train", "title": "Who Is the Vampire? (The Night Train)", "posted": "2026-10-13", "culprit": "E", "who": "The Student in the scarf", "answer": "Read the newspaper: BURIED YESTERDAY, above a photo of the Student. The stain on his scarf is where he was bitten. He died, and he rose again.", "game": true}, {"id": "vampire", "title": "Who Is the Vampire?", "posted": "2026-10-08", "culprit": "E", "who": "The Countess", "answer": "The portrait on the wall is three hundred years old, and it shows the Countess exactly as she stands tonight, down to the ruby brooch. She has not aged a day.", "game": true}, {"id": "host", "title": "Who Poisoned the Host?", "posted": "2026-10-02", "culprit": "C", "who": "The Doctor with the medicine case", "answer": "Poison comes in a vial, and the small cap lying beside the host's glass belongs to one. The Doctor is holding a tiny vial right now, and his medicine case is open.", "game": false}, {"id": "ring", "title": "Who Stole the Ring?", "posted": "2026-10-01", "culprit": "A", "who": "The Groom", "answer": "Everyone else is staring at the empty box. The Groom is looking away, and his left hand stays buried in his pocket. Cold feet, and a ring he was not ready to give.", "game": false}, {"id": "trophy", "title": "Who Stole the Trophy?", "posted": "2026-09-28", "culprit": "D", "who": "The Technician with the tool belt", "answer": "The ribbon around the stand was torn, and a scrap of the same red ribbon hangs from the Technician's tool belt. The heavy boot print beside it matches his work boots.", "game": false}, {"id": "necklace", "title": "Who Stole the Necklace?", "posted": "2026-09-27", "culprit": "A", "who": "The Singer in gold sequins", "answer": "The gold star sequin lies inside the empty hollow, exactly where the necklace was. Only a hand reaching in could drop it there, and the Singer's sequinned cuff has a gap.", "game": false}, {"id": "safe", "title": "Who Opened the Safe?", "posted": "2026-09-26", "culprit": "D", "who": "The Mechanic with oily hands", "answer": "The scratches around the keyhole mean the lock was forced with tools, not opened with a key. The dark smudge is grease, and the Mechanic's fingers are black with it.", "game": false}, {"id": "painting", "title": "Who Stole the Painting?", "posted": "2026-09-24", "culprit": "B", "who": "The Auctioneer with the red card", "answer": "The painting was unscrewed from its frame, and right beside the screwdriver lies a torn red triangle. It is the missing corner of the Auctioneer's red card.", "game": false}, {"id": "diamond", "title": "Who Stole the Diamond?", "posted": "2026-09-23", "culprit": "E", "who": "The Security Guard", "answer": "The case is closed and not a single pane is broken, so it was opened with a key and locked again. Only the Security Guard carries the keys.", "game": false}, {"id": "crown", "title": "Who Stole the Crown?", "posted": "2026-09-22", "culprit": "E", "who": "The Guest with the gift box", "answer": "A crown is far too big for a pocket. The Guest with the gift box is the only one with somewhere to hide it, at a ball where nobody else brought a gift.", "game": true}];
 
 // Records a click event in GoatCounter when the counter is on; does nothing otherwise.
 const track = (path, title) => window.goatcounter && window.goatcounter.count && window.goatcounter.count({ path, title, event: true });
 
-const cta = document.getElementById('cta');
-cta.innerHTML = `<a class="cta" href="${SHOP.url}"><b>${SHOP.title}</b><span>${SHOP.text}</span><br /><span class="go">${SHOP.button}</span></a>`
-  + (FREE_URL ? `<a class="cta-free" href="${FREE_URL}">Or try 3 printable cases for free →</a>` : '');
-cta.querySelector('.cta').addEventListener('click', () => track('click-shop-banner', 'Shop banner'));
-cta.querySelector('.cta-free')?.addEventListener('click', () => track('click-free-sample', 'Free sample link'));
+const today = new Date();
+document.querySelector('.play').addEventListener('click', () => track('click-play', 'Play the cases'));
+
+const shop = document.getElementById('packs');
+for (const pack of PACKS) {
+  if (pack.until && today >= new Date(pack.until + 'T00:00:00')) continue;
+  const card = document.createElement('a');
+  card.className = 'pack';
+  card.href = pack.url;
+  card.innerHTML = `<img src="${pack.image}" alt="" loading="lazy" /><b>${pack.title}</b><span>${pack.text}</span><div class="go">${pack.price}</div>`;
+  card.addEventListener('click', () => track(`click-pack-${pack.title}`, `Shop: ${pack.title}`));
+  shop.append(card);
+}
+if (FREE_URL) {
+  shop.insertAdjacentHTML('afterend', `<a class="cta-free" href="${FREE_URL}">Or try 3 printable cases for free →</a>`);
+  document.querySelector('.cta-free').addEventListener('click', () => track('click-free-sample', 'Free sample link'));
+}
 
 const list = document.getElementById('list');
-const today = new Date();
 for (const c of CASES) {
   const posted = new Date(c.posted + 'T12:00:00');
   const unlock = new Date(posted.getTime() + UNLOCK_DAYS * 86400000);
@@ -92,10 +116,18 @@ for (const c of CASES) {
     button.addEventListener('click', () => {
       track(`reveal-${c.id}`, `Reveal: ${c.title}`);
       slot.innerHTML = `<div class="answer"><b>${c.culprit}</b> · ${c.who}. ${c.answer}</div>
-        <a class="more" href="${SHOP.url}">${SHOP.after_answer} →</a>`;
-      slot.querySelector('.more').addEventListener('click', () => track(`click-shop-after-${c.id}`, `Shop link after ${c.title}`));
+        <a class="more" href="#shop">More mysteries to print ↓</a>`;
     });
     slot.append(button);
+    // Cases that are in the web game: invite a try before the answer.
+    if (c.game) {
+      const solve = document.createElement('a');
+      solve.className = 'solve';
+      solve.href = `play/?case=${c.id}`;
+      solve.textContent = 'Solve it in the game first →';
+      solve.addEventListener('click', () => track(`click-solve-${c.id}`, `Solve in game: ${c.title}`));
+      slot.append(solve);
+    }
   }
   list.append(row);
 }
