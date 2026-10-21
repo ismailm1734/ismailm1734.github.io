@@ -103,12 +103,13 @@ if (FREE_URL) {
 }
 
 const list = document.getElementById('list');
-for (const c of CASES) {
+for (const [i, c] of CASES.entries()) {
   const posted = new Date(c.posted + 'T12:00:00');
   const unlock = new Date(posted.getTime() + UNLOCK_DAYS * 86400000);
   const row = document.createElement('div');
   row.className = 'case';
-  row.innerHTML = `<img src="img/${c.id}.jpg" alt="" loading="lazy" />
+  // The first rows are on screen at once, so only the rest wait to load.
+  row.innerHTML = `<img src="img/${c.id}.jpg" alt="" ${i < 3 ? '' : 'loading="lazy"'} />
     <div><h2>${c.title}</h2><div class="date">Posted ${posted.toLocaleDateString('en-GB', { day: 'numeric', month: 'long' })}</div><div class="slot"></div></div>`;
   const slot = row.querySelector('.slot');
   if (today < unlock) {
