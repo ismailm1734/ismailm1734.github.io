@@ -117,7 +117,7 @@ for (const c of CASES) {
     const early = document.createElement('a');
     early.className = 'reveal early';
     early.href = `play/?case=${c.id}`;
-    early.innerHTML = 'Can’t wait? Play it now · $1.99<small>Solve it in the game and see the answer today</small>';
+    early.innerHTML = 'Can’t wait? Play it now<small>Solve it in the game and see the answer today</small>';
     early.addEventListener('click', () => track(`click-early-${c.id}`, `Play now: ${c.title}`));
     slot.append(early);
   } else {
