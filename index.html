@@ -4,20 +4,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>İsmail Memiş - Portfolio</title>
-  <meta name="description" content="Computer science student at Sabancı University, graduating 2027. I like taking systems apart to see what actually makes them work.">
+  <meta name="description" content="Computer science student at Sabancı University (expected June 2027). I make games, ship them to real players and use their data to decide what to change next.">
 
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 
   <meta property="og:title" content="İsmail Memiş - Portfolio">
-  <meta property="og:description" content="Computer science student at Sabancı University, graduating 2027. I like taking systems apart to see what actually makes them work.">
+  <meta property="og:description" content="Computer science student at Sabancı University (expected June 2027). I make games, ship them to real players and use their data to decide what to change next.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ismailm1734.github.io/">
-  <meta property="og:image" content="https://ismailm1734.github.io/assets/meeting-assistant.png">
+  <meta property="og:image" content="https://ismailm1734.github.io/assets/tiny-to-titan.jpg">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="İsmail Memiş - Portfolio">
-  <meta name="twitter:description" content="Computer science student at Sabancı University, graduating 2027. I like taking systems apart to see what actually makes them work.">
-  <meta name="twitter:image" content="https://ismailm1734.github.io/assets/meeting-assistant.png">
+  <meta name="twitter:description" content="Computer science student at Sabancı University (expected June 2027). I make games, ship them to real players and use their data to decide what to change next.">
+  <meta name="twitter:image" content="https://ismailm1734.github.io/assets/tiny-to-titan.jpg">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,8 +29,8 @@
   <div class="container">
     <header>
       <h1>İsmail Memiş</h1>
-      <p>Computer science student at Sabancı University, graduating 2027.<br>
-      I like taking systems apart to see what actually makes them work.</p>
+      <p class="tagline">I make games, ship them to real players, and use their data to decide what to change next.</p>
+      <p>Computer science student at Sabancı University, expected to graduate in June 2027.</p>
 
       <div class="header-links">
         <a href="https://github.com/ismailm1734" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
@@ -39,57 +39,114 @@
         <a href="https://www.linkedin.com/in/ismail-memiş-722ab3253/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
           <span class="icon icon-linkedin"></span>
         </a>
-        <a href="mailto:ismailmemis1734@gmail.com" aria-label="Email">
+        <a href="mailto:ismail.memis@sabanciuniv.edu" aria-label="Email">
           <span class="icon icon-mail"></span>
         </a>
+        <a href="assets/ismail-memis-cv.pdf" class="header-cv" target="_blank" rel="noopener noreferrer">CV (PDF)</a>
       </div>
     </header>
 
     <main>
+      <section class="case-study">
+        <div class="section-number">01 · Case study</div>
+        <h2>Tiny to Titan</h2>
+        <p class="case-subtitle">3D evolution game with <span class="accent-number">811</span> plays on Playgama, one of my 3 live games there.</p>
+        <img src="assets/tiny-to-titan.jpg" alt="Tiny to Titan cover art: a small worm marked 1 next to a fire-breathing dragon marked 999">
+
+        <p class="case-intro">I built a per-animal funnel from the event logs of the first 138 catalog players and found that half of the players who quit stopped at the 3rd to 5th animal, right where the XP needed jumped 5.5×. In v1.2.0 I flattened that curve, reworked the lake zone and tagged every event with its build version to compare releases.</p>
+
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-label">Reached the 4th animal</div>
+            <div class="stat-value">78%</div>
+            <div class="stat-delta">from 61%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Quit within 2 minutes</div>
+            <div class="stat-value">15%</div>
+            <div class="stat-delta">from 25%</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Median session</div>
+            <div class="stat-value">8.6 min</div>
+            <div class="stat-delta">from 6.7 min</div>
+          </div>
+        </div>
+        <p class="stat-note">First 40 new players on v1.2.0 vs 191 on v1.1.6; an early read on a small sample.</p>
+
+        <div class="tech-tags">JavaScript · Three.js · Vite · event instrumentation · funnel analysis</div>
+        <div class="links-row">
+          Links: <a href="https://playgama.com/game/tiny-to-titan" target="_blank" rel="noopener noreferrer">Play on Playgama</a>
+        </div>
+      </section>
+
+      <section class="case-study">
+        <div class="section-number">02 · Case study</div>
+        <h2>Looped Mysteries</h2>
+        <p class="case-subtitle">Instagram mystery brand and companion web game.</p>
+        <div class="case-gallery">
+          <img src="assets/lm-alien.jpg" alt="Looped Mysteries case cover: Who is the alien? Five suspects around a table in a snowed-in research station">
+          <img src="assets/lm-vampire.jpg" alt="Looped Mysteries case cover: Who is the vampire? Five suspects at a masked ball">
+          <img src="assets/lm-ghost.jpg" alt="Looped Mysteries case cover: Who is the ghost? Five suspects at a séance table">
+        </div>
+
+        <p class="case-intro">Each Reel is a "who is the ___?" mystery with five suspects, and the full case is playable on the web. I treat every Reel as an experiment, changing the next hook and setup based on reach, saves and follows, and the game tracks each case step by step from the first clue to the accusation. The first sales came from Instagram traffic.</p>
+
+        <div class="stat-row">
+          <div class="stat">
+            <div class="stat-label">Reel views</div>
+            <div class="stat-value">3.8M</div>
+            <div class="stat-delta">5 Reels in 6 days</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Case starts</div>
+            <div class="stat-value">523</div>
+            <div class="stat-delta">in the web game</div>
+          </div>
+          <div class="stat">
+            <div class="stat-label">Solve rate</div>
+            <div class="stat-value">73%</div>
+            <div class="stat-delta">382 of 523 cases</div>
+          </div>
+        </div>
+
+        <div class="tech-tags">JavaScript · Vite · AI image and video tools · Gumroad</div>
+        <div class="links-row">
+          Links: <a href="https://loopedmysteries.me/" target="_blank" rel="noopener noreferrer">Play</a>
+          <span class="separator">·</span>
+          <a href="https://www.instagram.com/loopedmysteries/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        </div>
+      </section>
+
       <section class="featured-project">
-        <div class="section-number">01</div>
-        <h2>Teams Meeting Assistant</h2>
+        <div class="section-number">03 · Experience</div>
+        <h2>AI Integration Intern, Öykü Lojistik</h2>
+        <p class="case-subtitle">Jul – Sep 2026</p>
         <img src="assets/meeting-assistant.png" alt="Diagram of the Teams Meeting Assistant pipeline, from transcript to email summary and WhatsApp Q&amp;A">
 
         <div class="featured-content">
           <div class="content-block">
-            <h3>Problem</h3>
-            <p>Meeting follow-ups were manual: someone had to remember to write up a summary for participants, and answering "what did we decide on X" meant digging back through a transcript by hand.</p>
+            <h3>What I built</h3>
+            <p>A permission-scoped, multi-channel AI assistant system on n8n, Supabase and the WhatsApp Cloud API. About <span class="accent-number">20</span> automation flows are now in production. I mapped operational workflows with the company's AI specialist and turned them into testable automations.</p>
           </div>
 
           <div class="content-block">
-            <h3>What I did</h3>
-            <p>I built an automated pipeline in n8n that pulls Microsoft Teams meeting transcripts, emails a summary to participants automatically, and answers follow-up questions about past meetings over WhatsApp. Supabase stores transcripts and summaries, and the Claude API handles summarization and the WhatsApp Q&A.</p>
-          </div>
-
-          <div class="content-block">
-            <h3>What I found</h3>
-            <p>The hard parts were idempotency — making sure a transcript is never processed or sent twice — and carrying meeting access permissions through the pipeline correctly. It's now in active use at a <span class="accent-number">210</span>-person logistics company.</p>
+            <h3>Example: Teams Meeting Assistant</h3>
+            <p>One of those flows pulls Microsoft Teams meeting transcripts, emails a summary to participants automatically, and answers follow-up questions about past meetings over WhatsApp. The hard parts were idempotency (a transcript is never processed or sent twice) and carrying meeting access permissions through the pipeline correctly.</p>
           </div>
         </div>
+        <div class="tech-tags">n8n · Supabase · WhatsApp Cloud API · Microsoft Teams · Claude API</div>
       </section>
 
       <section class="other-projects">
-        <div class="section-number">02</div>
+        <div class="section-number">04 · More games</div>
         <div class="projects-grid">
-
-          <article class="project-card">
-            <img src="assets/director-stage.png" alt="Director Stage interface showing the shot list, three rigged performers in the viewport, and the pose and camera controls">
-            <div class="card-content">
-              <h3>Director Stage</h3>
-              <p>A browser-based previsualization prototype for planning action shots. I built controls for placing and posing three rigged performers, adjusting the camera, and saving five shots. It exports aligned 1080p blocking frames, depth maps and pose guides for an AI video workflow.</p>
-              <div class="tech-tags">JavaScript · Three.js · Vite · WebGL</div>
-              <div class="links-row">
-                Links: <a href="https://ismailm1734.github.io/director-stage/" target="_blank" rel="noopener noreferrer">Interactive demo</a>
-              </div>
-            </div>
-          </article>
 
           <article class="project-card">
             <img src="assets/yuva-muhafizi.png" alt="Title screen of Yuva Muhafızı, showing the armored soldier ant holding a spear">
             <div class="card-content">
               <h3>Yuva Muhafızı</h3>
-              <p>A third-person 3D action game where you play the colony's soldier ant. By day you raid a procedurally rearranged backyard for food and resin with your worker ants; by night you defend the queen against insect waves coming through a single entrance, using telegraphed-attack combat, traps and caste evolutions. The game loop, AI, combat and UI are all written from scratch on top of Three.js.</p>
+              <p>A third-person 3D action game where you play the colony's soldier ant. By day you raid a procedurally rearranged backyard for food and resin with your worker ants; by night you defend the queen against insect waves using telegraphed-attack combat, traps and caste evolutions. The game loop, AI, combat and UI are written from scratch on top of Three.js.</p>
               <div class="tech-tags">JavaScript · Three.js · Vite</div>
               <div class="links-row">
                 Links: <a href="https://ismailm1734.github.io/yuva-muhafizi/" target="_blank" rel="noopener noreferrer">Play</a>
@@ -98,24 +155,10 @@
           </article>
 
           <article class="project-card">
-            <img src="assets/economy-lab.png" alt="Screenshot of the Match Villains Economy Lab simulator">
-            <div class="card-content">
-              <h3>Match Villains Economy Lab</h3>
-              <p>An interactive simulator built around how a match-3 game balances its difficulty curve against in-app purchase revenue. Modeled win rates, wall frequency, near-win purchase prompts, pack prices, and the lives gate, then ran a cohort of <span class="accent-number">1,000</span> players through <span class="accent-number">120</span> levels to find the balance point between harder difficulty and player churn.</p>
-              <div class="tech-tags">JavaScript</div>
-              <div class="links-row">
-                Links: <a href="https://ismailm1734.github.io/matchvillains-economy-lab/" target="_blank" rel="noopener noreferrer">Live demo</a>
-                <span class="separator">·</span>
-                <a href="https://github.com/ismailm1734/matchvillains-economy-lab" target="_blank" rel="noopener noreferrer">Code</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
             <img src="assets/boids.png" alt="Screenshot of Shoal, a boids-based fish flocking game">
             <div class="card-content">
               <h3>Shoal</h3>
-              <p>A 2D canvas game where you guide a school of fish with a light cursor instead of controlling them directly — the fish follow boids flocking rules (separation, alignment, cohesion) plus a weak attraction to the light. Predators hunt stray fish but flee from enough light intensity, so survival comes from staying grouped near the light rather than any single fish's skill.</p>
+              <p>A 2D canvas game where you guide a school of fish with a light cursor instead of controlling them directly. The fish follow boids flocking rules plus a weak attraction to the light; predators hunt stray fish but flee from enough light, so survival comes from keeping the school together.</p>
               <div class="tech-tags">JavaScript · HTML5 Canvas</div>
               <div class="links-row">
                 Links: <a href="https://ismailm1734.github.io/boids_fishes/" target="_blank" rel="noopener noreferrer">Play</a>
@@ -125,11 +168,48 @@
             </div>
           </article>
 
+        </div>
+        <ul class="compact-list compact-list--after-grid">
+          <li class="thumb-item">
+            <img src="assets/knight-launch.jpg" alt="Knight Launch cover: a screaming knight flying through the air from a trebuchet">
+            <div>
+              <h3>Knight Launch</h3>
+              <p>A catapult ragdoll game built on planck.js physics. Live on Playgama.</p>
+              <div class="links-row"><a href="https://playgama.com/game/knight-launch" target="_blank" rel="noopener noreferrer">Play on Playgama</a></div>
+            </div>
+          </li>
+          <li class="thumb-item">
+            <img src="assets/arrow-escape.jpg" alt="Arrow Escape cover: a grid of tangled colored arrows">
+            <div>
+              <h3>Arrow Escape</h3>
+              <p>An arrow-untangling puzzle game. Live on Playgama.</p>
+              <div class="links-row"><a href="https://playgama.com/game/arrow-escape" target="_blank" rel="noopener noreferrer">Play on Playgama</a></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="other-projects">
+        <div class="section-number">05 · Tools</div>
+        <div class="projects-grid">
+
+          <article class="project-card">
+            <img src="assets/director-stage.png" alt="Director Stage interface showing the shot list, three rigged performers in the viewport, and the pose and camera controls">
+            <div class="card-content">
+              <h3>Director Stage</h3>
+              <p>A browser-based previsualization prototype for planning action shots. You place and pose three rigged performers, adjust the camera and save five shots, then export aligned 1080p blocking frames, depth maps and pose guides for an AI video workflow.</p>
+              <div class="tech-tags">JavaScript · Three.js · Vite · WebGL</div>
+              <div class="links-row">
+                Links: <a href="https://ismailm1734.github.io/director-stage/" target="_blank" rel="noopener noreferrer">Interactive demo</a>
+              </div>
+            </div>
+          </article>
+
           <article class="project-card">
             <img src="assets/cozy-pomodoro.png" alt="Screenshot of Cozy Pomodoro showing a running focus timer, a task list, the lofi radio bar, and a pixel-art character typing at her desk">
             <div class="card-content">
               <h3>Cozy Pomodoro</h3>
-              <p>A calm Pomodoro timer with a pixel-art companion who follows your sessions: she types while you focus, rests when you pause and walks to the couch on breaks. She is a chain of <span class="accent-number">8</span> AI-generated green-screen clips keyed live on a canvas. It also has a built-in lofi radio, an always-on-top mini player window, and English and Turkish versions.</p>
+              <p>A calm Pomodoro timer with a pixel-art companion who follows your sessions: she types while you focus, rests when you pause and walks to the couch on breaks. She is a chain of <span class="accent-number">8</span> AI-generated green-screen clips keyed live on a canvas. It also has a lofi radio, an always-on-top mini player and English and Turkish versions.</p>
               <div class="tech-tags">Next.js · TypeScript · React · Canvas</div>
               <div class="links-row">
                 Links: <a href="https://cozy-pomodoro-app.vercel.app" target="_blank" rel="noopener noreferrer">Live demo</a>
@@ -137,77 +217,44 @@
             </div>
           </article>
 
-          <article class="project-card">
-            <img src="assets/tiny-to-titan.png" alt="Title art of Tiny to Titan showing the animals you evolve through, from worm to elephant">
-            <div class="card-content">
-              <h3>Tiny to Titan</h3>
-              <p>A small 3D animal evolution game built quickly as a portal title. You start as a worm and fight up the food chain through <span class="accent-number">12</span> animals and <span class="accent-number">4</span> biomes, dodging telegraphed attacks while bot rivals hunt and evolve alongside you. One build runs standalone or inside a game portal: a thin platform layer handles saves, ads and pause events for the CrazyGames and Playgama SDKs.</p>
-              <div class="tech-tags">JavaScript · Three.js · Vite</div>
-              <div class="links-row">
-                Links: <a href="https://playgama.ai/play/h3hihb4tig" target="_blank" rel="noopener noreferrer">Play on Playgama</a>
-                <span class="separator">·</span>
-                <a href="https://ismailm1734.github.io/tiny-to-titan/" target="_blank" rel="noopener noreferrer">Standalone build</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/tennis.svg" alt="Chart comparing Logistic Regression and Random Forest accuracy for the Tennis Match Outcome Prediction project">
-            <div class="card-content">
-              <h3>Tennis Match Outcome Prediction</h3>
-              <p>Predicting ATP match winners from historical match data. Engineered ranking and contextual features including surface, tournament level and seeding, then trained and compared logistic regression against a random forest.</p>
-              <div class="tech-tags">Python · scikit-learn · pandas</div>
-              <div class="links-row">
-                Links: <a href="https://github.com/ismailm1734/DSA-210-Project" target="_blank" rel="noopener noreferrer">https://github.com/ismailm1734/DSA-210-Project</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/smart-parking.svg" alt="Entity-relationship diagram of the Smart Parking Reservation database schema">
-            <div class="card-content">
-              <h3>Smart Parking Reservation System</h3>
-              <p>A parking reservation system with a PHP backend and a hybrid data layer combining MySQL and MongoDB. Stored procedures and triggers handle reporting and data integrity. Solo course project for database systems.</p>
-              <div class="tech-tags">PHP · MySQL · MongoDB</div>
-              <div class="links-row">
-                Links: <a href="https://github.com/ismailm1734/smart-parking-reservation" target="_blank" rel="noopener noreferrer">Code</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/lc3.png" alt="Screenshot of the LC-3 Virtual Machine">
-            <div class="card-content">
-              <h3>LC-3 Virtual Machine</h3>
-              <p>A virtual machine that interprets the LC-3 instruction set and manages memory with paging, written for an operating systems course.</p>
-              <div class="tech-tags">C++</div>
-            </div>
-          </article>
-
-          <article class="project-card">
-            <img src="assets/fading-lantern.png" alt="Screenshot of Fading Lantern">
-            <div class="card-content">
-              <h3>Fading Lantern</h3>
-              <p>A top-down horde-survival roguelike where the player's lantern light constantly shrinks and enemies only take full damage while standing inside it, forcing a push-and-retreat rhythm around the light radius.</p>
-              <div class="tech-tags">Unity · C#</div>
-            </div>
-          </article>
-
         </div>
       </section>
 
+      <section class="course-projects">
+        <div class="section-number">06 · Research and course projects</div>
+        <ul class="compact-list">
+          <li>
+            <h3>Text-to-SQL with Small Language Models</h3>
+            <p>Graduation project (ENS 491), 2026–27. A CPU-only ~1B-parameter model with schema-aware retrieval and execution-based verification, evaluated on BIRD and Spider 2.0.</p>
+            <div class="tech-tags">Python · LLMs · SQL</div>
+          </li>
+          <li>
+            <h3>Tennis Match Outcome Prediction</h3>
+            <p>Predicting ATP match winners from 1968–2023 match data. Engineered ranking and context features (surface, tournament level, seeding) and compared logistic regression with a random forest.</p>
+            <div class="tech-tags">Python · scikit-learn · pandas</div>
+            <div class="links-row"><a href="https://github.com/ismailm1734/tennis-match-prediction" target="_blank" rel="noopener noreferrer">Code</a></div>
+          </li>
+          <li>
+            <h3>Smart Parking Reservation System</h3>
+            <p>Database systems course project: a PHP backend on MySQL and MongoDB, with stored procedures and triggers for reporting and data integrity.</p>
+            <div class="tech-tags">PHP · MySQL · MongoDB</div>
+            <div class="links-row"><a href="https://github.com/ismailm1734/smart-parking-reservation" target="_blank" rel="noopener noreferrer">Code</a></div>
+          </li>
+        </ul>
+      </section>
+
       <section class="about">
-        <div class="section-number">03</div>
+        <div class="section-number">07 · About</div>
         <div class="about-content">
-          <p>I'm a computer science student at Sabancı University, graduating in <span class="accent-number">2027</span>. Most of what I build starts with taking something apart — a game's economy, a company's meeting workflow — and turning the behaviour underneath it into models and metrics.</p>
-          <p>Right now I'm doing an AI and data integration internship at a logistics company, working on the customs side of its platform. Outside of school and work, I play a lot of puzzle and competitive games, mostly Teamfight Tactics at Diamond.</p>
-          <div class="tech-tags">Python · C++ · SQL · JavaScript · PHP · pandas · scikit-learn · Git · Linux</div>
+          <p>I'm a computer science student at Sabancı University, expected to graduate in June 2027. I like shipping something small, watching what real users do with it, and changing the next version based on that, whether it is a game, a Reel or an internal tool.</p>
+          <p>From July to September 2026 I was an AI Integration Intern at Öykü Lojistik, building automation flows with n8n, Supabase and the WhatsApp Cloud API. Outside of school and work, I play a lot of puzzle and competitive games, mostly Teamfight Tactics at Diamond.</p>
+          <div class="tech-tags">JavaScript · Three.js · Python · SQL · C++ · PHP · pandas · scikit-learn · n8n · Supabase · Git</div>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>Email: <a href="mailto:ismailmemis1734@gmail.com">ismailmemis1734@gmail.com</a></p>
+      <p>Email: <a href="mailto:ismail.memis@sabanciuniv.edu">ismail.memis@sabanciuniv.edu</a></p>
       <p>CV: <a href="assets/ismail-memis-cv.pdf" target="_blank" rel="noopener noreferrer">Download CV (PDF)</a></p>
     </footer>
   </div>
