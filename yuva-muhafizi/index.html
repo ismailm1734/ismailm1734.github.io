@@ -7,8 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&family=Figtree:ital,wght@0,400;0,600;0,800;1,400&display=swap">
-  <script type="module" crossorigin src="./assets/index-D7s2goYK.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-B1VF376G.css">
+  <script type="module" crossorigin src="./assets/index-DoFOPrX1.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DMPuV8H_.css">
 </head>
 <body>
 <canvas id="game" tabindex="0"></canvas>
@@ -25,8 +25,8 @@
     <div class="hp" id="pRow"><div class="bar big"><i id="pBar"></i></div><span class="val" id="pVal">100</span></div>
     <div class="gauge" id="rRow" hidden><span class="lbl" id="rLbl">Direnç</span><div class="bar thin"><i id="rBar"></i></div><span class="val" id="rVal">0</span></div>
     <div class="colony" id="colonyRows">
-      <div class="mini" id="qRow" title="Kraliçe"><i class="crown"></i><div class="bar"><i id="qBar"></i></div><span class="val" id="qVal">300</span></div>
-      <div class="mini" id="nRow" title="Yuva"><i class="mound"></i><div class="bar"><i id="nBar"></i></div><span class="val" id="nVal">400</span></div>
+      <div class="mini" id="qRow" title="Kraliçe" hidden><i class="crown"></i><div class="bar"><i id="qBar"></i></div><span class="val" id="qVal">300</span></div>
+      <div class="mini" id="nRow" title="Yuva girişi"><i class="mound"></i><div class="bar"><i id="nBar"></i></div><span class="val" id="nVal">400</span></div>
     </div>
     <div class="chips"><span class="chip caste" id="casteChip" hidden>Asker karınca</span><span class="chip" id="phChip" hidden>Feromon</span><span class="chip" id="orderChip" hidden>Emir</span></div>
   </div>
@@ -48,14 +48,17 @@
   <div class="abilities">
     <div class="ab" id="abBite" hidden><span class="combo"><i></i><i></i><i></i></span></div>
     <div class="ab" id="abGrab" hidden><span id="grabName"></span><span id="grabSub"></span></div>
-    <div class="ab" id="abDodge"><div class="cd" id="dodgeCd"></div><span class="key">⇧</span><span class="sub" id="dodgeSub">2/2</span></div>
+    <div class="ab" id="abDodge"><div class="cd" id="dodgeCd"></div><span class="key">Ctrl</span><span class="sub" id="dodgeSub">2/2</span></div>
     <div class="ab" id="abCall"><div class="cd" id="callCd"></div><span class="key">F</span><span class="sub" id="workerCnt">0</span></div>
     <div class="ab" id="abGuard"><div class="cd" id="guardCd"></div><span class="key">G</span><span class="sub" id="guardSub"></span></div>
     <div class="ab q locked" id="abQ"><div class="cd" id="qCd"></div><span class="key">Q</span><span class="name" id="qName">Kast</span><span class="sub" id="qSub">3. dalgada</span></div>
   </div>
   <canvas id="radar" width="320" height="320"></canvas>
+  <canvas id="gardenMap" hidden></canvas>
+  <div id="slingMenu" class="sling-menu" hidden></div>
 </div>
 
+<div id="fade" style="position:fixed;inset:0;background:#000;opacity:0;pointer-events:none;z-index:40"></div>
 <div id="overlay" class="title">
   <div class="card title" id="startCard">
     <div class="brand">
@@ -69,7 +72,7 @@
     </nav>
     <div class="ctrl-panel" id="ctrlPanel" hidden>
       <div class="keys">
-        <kbd>WASD</kbd><span>Yürü · <kbd>Shift</kbd> basılı koş, bas atıl</span>
+        <kbd>WASD</kbd><span>Yürü · <kbd>Shift</kbd> basılı koş · <kbd>Ctrl</kbd> atıl</span>
         <kbd>Sol tık</kbd><span>Saldır, art arda kombo · basılı: güçlü saplama</span>
         <kbd>Sağ tık</kbd><span>Kasta göre: yakala, kalkan, zıpkın, dirilt</span>
         <kbd>Space</kbd><span>Zıpla · havada sol tık: aşağı sapla</span>
@@ -101,6 +104,7 @@
       <button type="button" class="tab on" data-tab="nest" role="tab">Yuva</button>
       <button type="button" class="tab" data-tab="defense" role="tab">Savunma</button>
       <button type="button" class="tab" data-tab="colony" role="tab">Koloni</button>
+      <button type="button" class="tab" data-tab="garden" role="tab">Bahçe</button>
     </div>
     <section class="pane" data-pane="nest">
       <p class="pane-lede">Kazdığın her oda yuvada görünür ve koloniye bir şey katar.</p>
@@ -119,8 +123,16 @@
     <section class="pane" data-pane="colony" hidden>
       <div class="items" id="items"></div>
     </section>
-    <div class="raid-box" id="raidBox"><div><b>Gündüz yağması</b><span>Arka tünelden bahçeye çık: yiyecek, reçine ve diken topla. Gün batmadan tünele dönmeyen karınca kaybolur.</span></div><div class="raid-pick"><button type="button" class="ghost" id="raidLess" aria-label="Daha az karınca">−</button><strong id="raidN">0</strong><span>karınca</span><button type="button" class="ghost" id="raidMore" aria-label="Daha çok karınca">+</button></div><button class="ghost" id="raidBtn">Yağmaya Çık</button></div>
-    <div class="shop-foot"><span class="small">Harcanmayan kaynak kalır.</span><button class="primary" id="shopBtn">Dalgayı Başlat</button></div>
+    <section class="pane" data-pane="garden" hidden>
+      <p class="pane-lede">Bu gece kim gelecek, yuvaların öfkesine bağlı. Gündüz bir yuvayı vurursan öfkesi düşer, hazinesini çalarsan artar, dokunmazsan yavaş yavaş büyür.</p>
+      <div id="forecast"></div>
+      <div class="pane-sub"><b>Dostlar</b><span>Yardım ettiğin böcekler sana yardım eder.</span></div>
+      <div id="allies"></div>
+      <div class="pane-sub"><b>Tüneller</b><span>Keşfettiğin bölgelere yuvadan tünel kazdır.</span></div>
+      <div class="items" id="tunnels"></div>
+    </section>
+    <div class="raid-box" id="raidBox"><div><b>Gündüz yağması</b><span>Arka tünelden bahçeye çık: yiyecek, reçine ve diken topla. Gün batmadan tünele dönmeyen karınca kaybolur.</span></div><div class="raid-pick"><button type="button" class="ghost" id="raidLess" aria-label="Daha az karınca">−</button><strong id="raidN">0</strong><span>karınca</span><button type="button" class="ghost" id="raidMore" aria-label="Daha çok karınca">+</button></div><div class="raid-exit" id="raidExit" role="group" aria-label="Çıkış tüneli"></div><button class="ghost" id="raidBtn">Yağmaya Çık</button></div>
+    <div class="shop-foot"><span class="small">Harcanmayan kaynak kalır.</span><button class="primary" id="shopBtn">Dalgayı Başlat</button><button class="primary" id="shopClose" hidden>Yuvaya dön</button></div>
   </div>
 
   <div class="card gifts" id="giftCard" hidden>
